@@ -1,0 +1,152 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(51, 56, 56);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 22vw;
+height: 9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(114, 143, 143);
+  border-radius: 1em;
+  /* margin-top: 1%;
+  margin-right: 34%;
+  margin-left: 45%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  padding-right: 2%;*/
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  /* gap: 3rem; */
+  gap: 4rem;
+  margin-top: 3%;
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+nav .nav-icons .icons li i {
+  font-size: 20px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-20px);
+  
+}
+
+nav .nav-icons .icons li {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.icon-name {
+  visibility: hidden;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* background-color: #333; */
+  color: rgb(51, 56, 56);
+  /* padding: 10px; */
+  border-radius: 1em;
+  font-size: 15px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+ 
+}
+
+li:hover .icon-name {
+  visibility: visible;
+  opacity: 1;
+ 
+}
+
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 40vw;  
+    height: auto;  
+    flex-direction: column;  
+    padding: 1em; 
+   }
+
+  .icons {
+    gap: 1.5rem;  
+    padding: 0;
+    margin-top: 0;
+    }
+
+  .icons li {
+    font-size: 18px;  
+    }
+
+  .icon-name {
+    font-size: 12px;  
+    bottom: -15px; 
+    }
+}
+
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .container {
+    width: 46vw;  
+    height: 8vh; 
+  }
+
+  .icons {
+    gap: 2rem;  
+    }
+
+  .icons li {
+    font-size: 22px;  
+    }
+
+  .icon-name {
+    font-size: 14px;  
+    bottom: -20px; 
+  }  
+}
+
+
+@media (min-width: 1025px) {
+  .container {
+    width: 20vw;
+    height: 10vh;
+    padding: 1em; 
+  }
+
+  .icons {
+    gap: 3rem;  
+  }
+
+  .icons li {
+    font-size: 24px;  
+  }
+
+  .icon-name {
+    font-size: 16px;  
+    bottom: -25px;  
+  }
+}
